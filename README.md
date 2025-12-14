@@ -73,6 +73,30 @@ Regeneration is **debounced** so rapid clicks don’t cause overlapping re-rende
 - Each thumbnail is **250×150** with `object-fit: cover`.
 - Each thumbnail is wrapped with a link to the original image URL (click opens in browser).
 
+## Obsidian
+
+<div align="center">
+  <table border="0" cellspacing="0" cellpadding="5">
+    <tr><td colspan="2" align="center" style="padding: 6px 0 12px 0;"><strong>Obsidian</strong></td></tr>
+    <tr>
+      <td align="center">
+        <a href="https://raw.githubusercontent.com/ralexander87/git-table/main/showcase/screenshot_14122025_215818.jpg"><img src="https://raw.githubusercontent.com/ralexander87/git-table/main/showcase/screenshot_14122025_215818.jpg" width="250" height="150" alt="Image 1" style="object-fit: cover;"></a>
+      </td>
+      <td align="center">
+        <a href="https://raw.githubusercontent.com/ralexander87/git-table/main/showcase/screenshot_14122025_215905.jpg"><img src="https://raw.githubusercontent.com/ralexander87/git-table/main/showcase/screenshot_14122025_215905.jpg" width="250" height="150" alt="Image 2" style="object-fit: cover;"></a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <a href="https://raw.githubusercontent.com/ralexander87/git-table/main/showcase/screenshot_14122025_215944.jpg"><img src="https://raw.githubusercontent.com/ralexander87/git-table/main/showcase/screenshot_14122025_215944.jpg" width="250" height="150" alt="Image 3" style="object-fit: cover;"></a>
+      </td>
+      <td align="center">
+        <a href="https://raw.githubusercontent.com/ralexander87/git-table/main/showcase/screenshot_14122025_220045.jpg"><img src="https://raw.githubusercontent.com/ralexander87/git-table/main/showcase/screenshot_14122025_220045.jpg" width="250" height="150" alt="Image 4" style="object-fit: cover;"></a>
+      </td>
+    </tr>
+  </table>
+</div>
+
 ## Showcase
 
 <div align="center">

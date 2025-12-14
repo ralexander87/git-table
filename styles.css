@@ -1,0 +1,483 @@
+/* Fixed modal sizing WITHOUT modal scrollbars */
+.git-table-modal {
+  width: 1377px !important;
+  height: 768px !important;
+  max-width: 1377px !important;
+  max-height: 768px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.git-table-modal .modal-content {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+/* Root */
+.git-table {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 18px 0;
+  box-sizing: border-box;
+}
+
+/* Inner width = 100% */
+.git-table__wrap {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  padding: 14px;
+  box-sizing: border-box;
+
+  display: grid;
+  gap: 14px;
+  grid-template-rows: auto 0.95fr 1.05fr auto;
+}
+
+/* Header */
+.git-table__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.git-table__label {
+  color: var(--text-accent);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-size: 12px;
+  min-width: 70px;
+  flex: 0 0 auto;
+}
+
+.git-table__inputWrap {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.git-table__input {
+  width: 100%;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  padding: 0 12px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.git-table__found {
+  width: 170px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+/* Rows */
+.git-table__row {
+  min-height: 0;
+  min-width: 0;
+  display: grid;
+  gap: 14px;
+}
+
+.git-table__rowTop {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.git-table__rowBottom {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.git-table__rowBottom .git-table__panel:nth-child(2) {
+  grid-column: 2 / 4;
+}
+
+/* Panels */
+.git-table__panel {
+  border-radius: 12px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.git-table__panelHeader {
+  padding: 12px 14px 6px 14px;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  flex: 0 0 auto;
+}
+
+.git-table__panelHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.git-table__panelBody {
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+  padding: 10px 14px 14px 14px;
+}
+
+/* LIST */
+.git-table__listBody {
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12.5px;
+  line-height: 1.65;
+}
+
+.git-table__listActions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.git-table__deleteBtn {
+  height: 24px;
+  border-radius: 8px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  color: var(--text-normal);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  padding: 0 10px;
+  cursor: pointer;
+  flex: 0 0 auto;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.git-table__deleteBtn:hover {
+  background: var(--background-modifier-hover);
+}
+
+.git-table__deleteBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.git-table__item {
+  display: flex;
+  gap: 10px;
+  padding: 4px 8px;
+  min-width: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.git-table__item:hover {
+  background: var(--background-modifier-hover);
+}
+
+.git-table__item.is-selected {
+  outline: 1px solid var(--text-accent);
+  background: var(--background-modifier-hover);
+}
+
+.git-table__num {
+  color: var(--text-muted);
+  width: 42px;
+  text-align: right;
+  flex: 0 0 42px;
+}
+
+.git-table__file {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  color: var(--text-normal);
+}
+
+.git-table__empty {
+  color: var(--text-muted);
+  padding: 8px 0;
+}
+
+/* PREVIEW */
+.git-table__previewBody {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.git-table__previewInner {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.git-table__img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--background-modifier-border);
+}
+
+.git-table__previewMsg {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+/* SETTINGS */
+.git-table__settingsBody {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow: hidden;
+}
+
+.git-table__stepper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.git-table__stepperLabel {
+  color: var(--text-normal);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  min-width: 52px;
+  flex: 0 0 auto;
+}
+
+.git-table__stepperValue {
+  min-width: 44px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 8px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12.5px;
+  flex: 0 0 auto;
+}
+
+.git-table__stepperBtn {
+  width: 30px;
+  height: 28px;
+  border-radius: 8px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  color: var(--text-normal);
+  font-weight: 700;
+  line-height: 1;
+  padding: 0;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.git-table__stepperBtn:hover {
+  background: var(--background-modifier-hover);
+}
+
+/* TABLE */
+.git-table__tableBody {
+  overflow: auto;
+}
+
+.git-table__tableRender img {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* CODE */
+.git-table__codeBody {
+  overflow: auto;
+}
+
+.git-table__codeTop {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.git-table__copyBtn {
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+  color: var(--text-normal);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  padding: 0 12px;
+}
+
+.git-table__copyBtn:hover {
+  background: var(--background-modifier-hover);
+}
+
+.git-table__codePre {
+  margin: 0;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.git-table__code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: inherit;
+}
+
+/* Status */
+.git-table__status {
+  min-height: 18px;
+  color: var(--text-muted);
+  font-size: 12px;
+  align-self: start;
+}
+
+/* TABLE preview: numbered thumbnails */
+.git-table__thumb {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 0;
+}
+
+.git-table__thumb > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+.git-table__thumbNum {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--text-normal);
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 8px;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Small GENERATE button in CODE header */
+.git-table__genHeaderBtn {
+  height: 22px;
+  padding: 0 8px;
+  font-size: 10px;
+  border-radius: 8px;
+}
+
+/* Panel header action groups (keeps buttons close together) */
+.git-table__headerActions {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+/* SETTINGS: title checkbox + input */
+.git-table__titleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.git-table__titleLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-normal);
+  flex: 0 0 auto;
+  user-select: none;
+  cursor: pointer;
+}
+
+.git-table__titleInput {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 28px;
+  border-radius: 8px;
+  border: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  padding: 0 10px;
+  font-size: 12.5px;
+  box-sizing: border-box;
+}
+
+.git-table__titleInput:disabled {
+  opacity: 0.6;
+}
+
+/* Settings description block */
+.git-table__settingsDesc {
+  margin: 10px 0 18px 0;
+  padding: 10px 12px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 10px;
+  background: var(--background-secondary);
+}
+
+.git-table__settingsDesc p {
+  margin: 8px 0;
+  line-height: 1.35;
+}
+
+.git-table__settingsDesc ul {
+  margin: 8px 0 8px 18px;
+}

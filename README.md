@@ -182,4 +182,4 @@ To make the plugin safer for public use:
 ---
 
 Author: Robert Alexander  
-Version: 1.0.3
+Version: 1.0.4

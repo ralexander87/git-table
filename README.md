@@ -1,6 +1,7 @@
 # GIT Table (Obsidian plugin)
 
 === MADE WITH ChatGPT ===
+
 I creted this plugin for personal usage to making picture gallery in HTML/CSS for GIT hub README files.
 Script is made with chatGPT
 

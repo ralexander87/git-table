@@ -1,5 +1,9 @@
 # GIT Table (Obsidian plugin)
 
+=== MADE WITH ChatGPT ===
+I creted this plugin for personal usage to making picture gallery in HTML/CSS for GIT hub README files.
+Script is made with chatGPT
+
 GIT Table helps you build a clean **HTML table gallery** from a GitHub folder/repo of images, while giving you a visual way to **reorder**, **preview**, and **download** images inside Obsidian.
 
 The popup window is fixed at **1377×768** and is designed to fit with **no scrollbars**.
